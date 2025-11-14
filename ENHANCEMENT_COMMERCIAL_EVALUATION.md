@@ -20,7 +20,9 @@ The Village framework represents a **high-potential, production-ready foundation
 | Feature Completeness | 6.0/10 | Very High | $200K-400K | 6-12 months |
 | Market Readiness | 5.5/10 | High | $100K-200K | 3-6 months |
 | Commercial Viability | 7.0/10 | Very High | $50K-100K | 2-4 months |
-| **Overall Assessment** | **6.75/10** | **Very High** | **$500K-950K** | **12-18 months** |
+| **Overall Assessment** | **6.95/10** | **Very High** | **$500K-950K** | **12-18 months** |
+
+_Note: "Overall Assessment" is a weighted average based on the methodology in section 10.4 (weights: Technical Foundation 30%, Feature Completeness 30%, Market Readiness 20%, Commercial Viability 20%)._
 
 ### Strategic Recommendations
 
@@ -98,9 +100,9 @@ The Village framework represents a **high-potential, production-ready foundation
 | **Healthcare AI** | $11.2B | 38% | $336M | Medium | Very High | 7.5/10 |
 | **Legal Tech** | $3.8B | 24% | $114M | Low | High | 8.5/10 |
 
-**Total Addressable Market (TAM)**: $5.5B
-**Serviceable Addressable Market (SAM)**: $1.1B (20% capture)
-**Serviceable Obtainable Market (SOM)**: $55M (5% of SAM, Year 3)
+**Total Addressable Market (TAM)**: $5.498B
+**Serviceable Addressable Market (SAM)**: $1.10B (20% capture)
+**Serviceable Obtainable Market (SOM)**: $55.0M (5% of SAM, Year 3)
 
 ### 2.2 Competitive Analysis Matrix
 
@@ -167,8 +169,9 @@ The Village framework represents a **high-potential, production-ready foundation
 | **Team** | Departments | $999 | $9,999 (2mo free) | 200 villagers, collaboration, SSO, phone support, SLA | 1M requests/mo | 500 teams |
 | **Enterprise** | Large organizations | Custom | $50K+ | Unlimited, white-label, custom integrations, dedicated support, on-prem | None | 50 customers |
 
-**Expected MRR (Year 2)**: $450K
-**Expected ARR (Year 2)**: $5.4M
+**Expected MRR (Year 2) – Optimistic Scenario**: $450K
+**Expected ARR (Year 2) – Optimistic Scenario**: $5.4M  
+*Note: These figures assume rapid adoption and minimal churn. For a more conservative projection (Year 2 ARR: $1.5M), see Section 6.1.*
 
 ### 3.3 Go-to-Market Strategy Matrix
 
@@ -237,12 +240,12 @@ The Village framework represents a **high-potential, production-ready foundation
 
 | Phase | Timeline | Team Composition | Headcount | Loaded Cost | Infrastructure | Marketing | Total Investment |
 |-------|----------|------------------|-----------|-------------|----------------|-----------|------------------|
-| **Phase 1: Foundation** | 0-6mo | 2 Sr Engineers, 1 DevOps, 1 Product | 4 | $360K | $30K | $50K | $440K |
+| **Phase 1: Foundation** | 0-6mo | 1 CTO, 2 Sr Backend Engineers, 1 DevOps, 1 PM | 5 | $360K | $30K | $50K | $440K |
 | **Phase 2: Scale** | 6-12mo | +2 Engineers, +1 Designer, +1 GTM | 7 | $630K | $60K | $150K | $840K |
 | **Phase 3: Growth** | 12-18mo | +3 Engineers, +2 Sales, +1 Support | 13 | $1.17M | $120K | $300K | $1.59M |
-| **Contingency** | - | - | - | - | - | - | $285K (10%) |
+| **Contingency** | - | - | - | - | - | - | $287K (10%) |
 
-**Total 18-Month Investment**: $3.16M
+**Total 18-Month Investment**: $3.157M
 
 ### 5.2 Team Composition Matrix
 
@@ -259,7 +262,7 @@ The Village framework represents a **high-potential, production-ready foundation
 | **Marketing** | 0 | 1 | 1 | $140K | Content, community, events |
 | **Security Engineer** | 0 | 0 | 1 | $220K | Security, compliance |
 
-**Phase 1 Headcount**: 4 (Monthly burn: $60K)
+**Phase 1 Headcount**: 5 (Monthly burn: $68K)
 **Phase 2 Headcount**: 7 (Monthly burn: $105K)
 **Phase 3 Headcount**: 13 (Monthly burn: $195K)
 
@@ -334,7 +337,7 @@ The Village framework represents a **high-potential, production-ready foundation
 | **Bull Case** | $12M | 15x | $180M | 25% |
 | **Best Case** | $18M | 20x | $360M | 5% |
 
-**Expected Valuation (Year 3)**: $97M (probability-weighted)
+**Expected Valuation (Year 3)**: $103.8M (probability-weighted)
 
 ---
 
@@ -362,7 +365,7 @@ The Village framework represents a **high-potential, production-ready foundation
 
 ### 7.2 Quarter-by-Quarter Roadmap
 
-#### Q1 2025 (Months 1-3): Foundation
+#### Q1 2026 (Months 1-3): Foundation
 | Priority | Feature | Effort | Expected Impact |
 |----------|---------|--------|-----------------|
 | P0 | OpenAI provider implementation | 2w | Enable 80% of potential users |
@@ -374,7 +377,7 @@ The Village framework represents a **high-potential, production-ready foundation
 
 **Outcome**: Production-ready platform with major LLM providers
 
-#### Q2 2025 (Months 4-6): Scale Features
+#### Q2 2026 (Months 4-6): Scale Features
 | Priority | Feature | Effort | Expected Impact |
 |----------|---------|--------|-----------------|
 | P0 | Vector memory (Pinecone/Weaviate) | 4w | Advanced AI capabilities |
@@ -385,7 +388,7 @@ The Village framework represents a **high-potential, production-ready foundation
 
 **Outcome**: Enterprise-ready with self-service UI
 
-#### Q3 2025 (Months 7-9): Differentiation
+#### Q3 2026 (Months 7-9): Differentiation
 | Priority | Feature | Effort | Expected Impact |
 |----------|---------|--------|-----------------|
 | P1 | Visual workflow designer | 16w | Unique competitive advantage |
@@ -396,7 +399,7 @@ The Village framework represents a **high-potential, production-ready foundation
 
 **Outcome**: Market differentiation with unique features
 
-#### Q4 2025 (Months 10-12): Enterprise Scale
+#### Q4 2026 (Months 10-12): Enterprise Scale
 | Priority | Feature | Effort | Expected Impact |
 |----------|---------|--------|-----------------|
 | P1 | Multi-tenancy | 12w | SaaS scalability |
@@ -502,7 +505,7 @@ The Village framework represents a **high-potential, production-ready foundation
 | Dimension | Rating | Justification |
 |-----------|--------|---------------|
 | **Technical Foundation** | 8.5/10 | Excellent architecture, production-ready patterns, comprehensive testing |
-| **Market Opportunity** | 9.5/10 | Large TAM ($5.5B), high growth (30%+ CAGR), timing is optimal |
+| **Market Opportunity** | 9.5/10 | Large TAM ($5.498B), high growth (30%+ CAGR), timing is optimal |
 | **Competitive Position** | 7.0/10 | Strong differentiation potential, but established competitors |
 | **Commercial Viability** | 8.0/10 | Multiple revenue streams, clear path to profitability |
 | **Risk Profile** | 7.0/10 | Manageable technical/market risks, requires execution focus |
@@ -510,7 +513,9 @@ The Village framework represents a **high-potential, production-ready foundation
 | **Investment Efficiency** | 8.0/10 | Clear ROI, reasonable capital requirements |
 | **Exit Potential** | 8.5/10 | Strategic acquisition targets, IPO path viable |
 
-**Overall Commercial Viability Score**: **8.1/10 (Very High)**
+**Overall Commercial Viability Score**: **8.15/10 (Very High)**
+
+_Note: This score is calculated using the weighted methodology detailed in section 10.4._
 
 ### 10.2 Investment Recommendation
 
