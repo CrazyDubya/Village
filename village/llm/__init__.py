@@ -28,3 +28,9 @@ try:
     __all__.append("OllamaProvider")
 except ImportError:
     pass
+
+try:
+    from village.llm.bedrock import BedrockProvider
+    __all__.append("BedrockProvider")
+except ImportError:
+    pass

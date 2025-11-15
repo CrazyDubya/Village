@@ -52,8 +52,8 @@ class VillageMetrics:
             registry=self.registry
         )
         self.village_info.info({
-            'version': '0.3.0',
-            'phase': '1'
+            'version': '0.4.0',
+            'phase': '2'
         })
 
         # LLM Provider Metrics
