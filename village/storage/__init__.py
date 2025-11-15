@@ -10,3 +10,9 @@ try:
     __all__.append("PostgreSQLStorage")
 except ImportError:
     pass
+
+try:
+    from village.storage.vector import VectorMemory, vector_storage_available
+    __all__.extend(["VectorMemory", "vector_storage_available"])
+except ImportError:
+    pass

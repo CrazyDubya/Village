@@ -22,3 +22,9 @@ try:
     __all__.append("GoogleProvider")
 except ImportError:
     pass
+
+try:
+    from village.llm.ollama import OllamaProvider
+    __all__.append("OllamaProvider")
+except ImportError:
+    pass
