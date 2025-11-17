@@ -68,6 +68,11 @@ class OpenAIProvider(BaseLLMProvider):
         self.timeout = timeout
         self.config = kwargs
 
+        # Token usage tracking
+        self.total_tokens = 0
+        self.prompt_tokens = 0
+        self.completion_tokens = 0
+
         # Initialize sync and async clients
         self._client = OpenAI(
             api_key=self.api_key,
@@ -114,6 +119,12 @@ class OpenAIProvider(BaseLLMProvider):
                 **kwargs
             )
 
+            # Track token usage
+            if response.usage:
+                self.prompt_tokens += response.usage.prompt_tokens
+                self.completion_tokens += response.usage.completion_tokens
+                self.total_tokens += response.usage.total_tokens
+
             return response.choices[0].message.content or ""
 
         except Exception as e:
@@ -148,6 +159,12 @@ class OpenAIProvider(BaseLLMProvider):
                 temperature=temperature,
                 **kwargs
             )
+
+            # Track token usage
+            if response.usage:
+                self.prompt_tokens += response.usage.prompt_tokens
+                self.completion_tokens += response.usage.completion_tokens
+                self.total_tokens += response.usage.total_tokens
 
             return response.choices[0].message.content or ""
 
@@ -277,3 +294,21 @@ class OpenAIProvider(BaseLLMProvider):
 
         except Exception as e:
             raise LLMProviderError(f"OpenAI streaming failed: {str(e)}") from e
+
+    def get_token_usage(self) -> Dict[str, int]:
+        """Get current token usage statistics.
+
+        Returns:
+            Dictionary with total, prompt, and completion token counts
+        """
+        return {
+            "total_tokens": self.total_tokens,
+            "prompt_tokens": self.prompt_tokens,
+            "completion_tokens": self.completion_tokens,
+        }
+
+    def reset_token_usage(self) -> None:
+        """Reset token usage counters to zero."""
+        self.total_tokens = 0
+        self.prompt_tokens = 0
+        self.completion_tokens = 0

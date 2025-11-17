@@ -2,8 +2,13 @@
 
 import asyncio
 from typing import Any, Dict, Optional
+import logging
 
 from village.exceptions import VillagerError
+from village.utils.sanitizer import sanitize_input
+
+
+logger = logging.getLogger(__name__)
 
 
 class Villager:
@@ -71,10 +76,18 @@ class Villager:
         """
         if not self.llm_provider:
             raise VillagerError(f"Villager '{self.name}' has no LLM provider")
+
+        # Sanitize task input
+        sanitized_task = sanitize_input(task)
+        if sanitized_task != task:
+            logger.warning(
+                f"Sanitized potential injection in task for villager '{self.name}'. "
+                f"Original: '{task}', Sanitized: '{sanitized_task}'"
+            )
             
         try:
             # Create prompt with system context and task
-            prompt = f"{self.system_prompt}\n\nTask: {task}"
+            prompt = f"{self.system_prompt}\n\nTask: {sanitized_task}"
             
             # Add conversation history context if available
             if self._conversation_history:

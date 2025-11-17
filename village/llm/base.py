@@ -94,3 +94,15 @@ class BaseLLMProvider(ABC):
     def __repr__(self) -> str:
         """Return string representation of the provider."""
         return f"{self.__class__.__name__}()"
+
+    def get_token_usage(self) -> Dict[str, int]:
+        """Get current token usage statistics.
+
+        Returns:
+            Dictionary with total, prompt, and completion token counts
+        """
+        return {}
+
+    def reset_token_usage(self) -> None:
+        """Reset token usage counters to zero."""
+        pass
