@@ -93,15 +93,17 @@ class Village:
             "timestamp": asyncio.get_event_loop().time()
         }
         
-        # Execute task across all villagers
-        results = []
-        for villager in self.villagers.values():
+        # Execute task across all villagers concurrently
+        async def process_task_wrapper(villager):
             try:
                 result = await villager.process_task(task)
-                results.append(f"{villager.name}: {result}")
+                return f"{villager.name}: {result}"
             except Exception as e:
-                results.append(f"{villager.name}: Error - {str(e)}")
-                
+                return f"{villager.name}: Error - {str(e)}"
+
+        tasks = [process_task_wrapper(v) for v in self.villagers.values()]
+        results = await asyncio.gather(*tasks)
+
         # Combine results
         collaborative_result = "\n".join(results)
         task_record["result"] = collaborative_result
